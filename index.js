@@ -1,0 +1,10 @@
+export * from "./system.js";
+import {system} from "./system.js";
+document.title="Suomisaundi System — "+system;
+const notice=document.createElement("main");
+notice.style.cssText="font:16px system-ui;display:grid;place-content:center;text-align:center;min-height:80vh;padding:1rem";
+const h=document.createElement("h1");h.textContent="Nothing to see here";
+const p=document.createElement("p");p.textContent="This is a Suomisaundi subsidiary system. Enter through the main website. Redirecting in 10 seconds.";
+const a=document.createElement("a");a.href="https://suomisaundi-system.github.io/";a.textContent="Open Suomisaundi System";
+notice.append(h,p,a);document.body.append(notice);
+setTimeout(()=>location.replace(a.href),10000);
