@@ -1,7 +1,12 @@
 # Suomisaundi System — NodeJS
 
-Independent subsystem foundation. Public entry: https://suomisaundi-system.github.io/
+This is a public, independent subsystem foundation of Suomisaundi System.
 
-Files:  bootstraps ,  exports detection and runtime helpers. Pages redirect to the central site after 10 seconds.
+- `index.html` loads `index.js` as a module.
+- `index.js` shows a subsidiary notice and redirects visitors to the central website after ten seconds.
+- `system.js` exports browser capability detection and basic browser-runtime helpers.
 
-Browser workers and local messaging are not Node.js servers, hardened sandboxes, or distributed backend workers. Node.js, serverless execution, durable storage and backend virtualization require trusted hosting.
+Public entry point: https://suomisaundi-system.github.io/
+
+## Implementation status
+Foundation only. Capability detection is not an implementation of all supported browser APIs. Browser workers are not Node.js servers, hardened sandboxes, or provisioned cloud instances. Durable backend sessions and serverless execution require a trusted provider.
